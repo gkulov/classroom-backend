@@ -11,6 +11,13 @@ import {
 } from "drizzle-orm/pg-core";
 import { user } from "./auth.js";
 
+// just a short term solution to Schedule not defined
+type Schedule = {
+    day: string;
+    startTime: string;
+    endTime: string;
+};
+
 const timestamps = {
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")

@@ -67,7 +67,7 @@ export const account = pgTable(
     scope: text("scope"),
     idToken: text("id_token"),
     password: text("password"),
-
+    issuer: text("issuer"),
     ...timestamps,
   },
   (table) => ({
